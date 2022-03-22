@@ -8,7 +8,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-  var game = WordsBrain()
+  var game = WordsBrain() {
+    didSet {
+      cardLabel.text = game.word
+    }
+  }
   
   var timer = Timer()
   var totalTime = 60
@@ -85,9 +89,11 @@ class ViewController: UIViewController {
   }
   
   @objc func skipAction() {
+    game.nextCard()
   }
   
   @objc func plusAction() {
+    game.plus()
   }
   override func viewDidLoad() {
     super.viewDidLoad()

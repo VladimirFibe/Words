@@ -14,19 +14,22 @@ struct WordsBrain {
   var correct = 0
   var gameOver = false
   var running = false
-  mutating func nextPage() {
+  mutating func nextCard() {
     if card < words.count - 1 {
       card += 1
     } else {
       resetGame()
     }
   }
+  var word: String {
+    words[card]
+  }
   var correctLabel: String {
     String(correct)
   }
   mutating func plus() {
     correct += 1
-    nextPage()
+    nextCard()
   }
   mutating func start() {
     running = true

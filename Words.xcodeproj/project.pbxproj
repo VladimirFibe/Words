@@ -13,6 +13,7 @@
 		02FDB5DA27E945830002CEE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02FDB5D927E945830002CEE6 /* Assets.xcassets */; };
 		02FDB5DD27E945830002CEE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02FDB5DB27E945830002CEE6 /* LaunchScreen.storyboard */; };
 		02FDB5EA27E94AD20002CEE6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDB5E927E94AD20002CEE6 /* Extensions.swift */; };
+		02FDB5EC27E94DAE0002CEE6 /* GameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDB5EB27E94DAE0002CEE6 /* GameButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		02FDB5DC27E945830002CEE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02FDB5DE27E945830002CEE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02FDB5E927E94AD20002CEE6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		02FDB5EB27E94DAE0002CEE6 /* GameButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		02FDB5E727E947C60002CEE6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				02FDB5EB27E94DAE0002CEE6 /* GameButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				02FDB5D127E945810002CEE6 /* AppDelegate.swift in Sources */,
 				02FDB5D327E945810002CEE6 /* SceneDelegate.swift in Sources */,
 				02FDB5EA27E94AD20002CEE6 /* Extensions.swift in Sources */,
+				02FDB5EC27E94DAE0002CEE6 /* GameButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,11 @@ import UIKit
 class ViewController: UIViewController {
   var game = WordsBrain() {
     didSet {
-      cardLabel.text = game.word
+      if game.getRunning() {
+        cardLabel.text = game.word
+      } else {
+        cardLabel.text = "Нажмите на \"Старт\", когда будете готовы"
+      }
     }
   }
   
@@ -31,7 +35,8 @@ class ViewController: UIViewController {
   
   let cardLabel: UILabel = {
     let label = UILabel()
-    label.text = "нечетное число"
+    label.text = "Нажмите на \"Старт\", когда будете готовы"
+    label.numberOfLines = 0
     label.font = .systemFont(ofSize: 40)
     label.textAlignment = .center
     return label
@@ -69,6 +74,7 @@ class ViewController: UIViewController {
   }()
   
   @objc func startAction() {
+    game.start()
     startButton.isHidden = true
     skipButton.isHidden = false
     plusButton.isHidden = false
@@ -78,7 +84,13 @@ class ViewController: UIViewController {
   }
   func gameOver() {
     timer.invalidate()
-    timerLabel.text = "Game Over"
+    game.resetGame()
+    startButton.isHidden = false
+    skipButton.isHidden = true
+    plusButton.isHidden = true
+    let allert = UIAlertController(title: "Game Over", message: game.joke, preferredStyle: .alert)
+    allert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+    self.present(allert, animated: true, completion: nil)
   }
   @objc func update() {
     if secondsPassed > 0 {
@@ -90,10 +102,12 @@ class ViewController: UIViewController {
   
   @objc func skipAction() {
     game.nextCard()
+    if game.getGameOver() { gameOver() }
   }
   
   @objc func plusAction() {
     game.plus()
+    if game.getGameOver() { gameOver() }
   }
   override func viewDidLoad() {
     super.viewDidLoad()

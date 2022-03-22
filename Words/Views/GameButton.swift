@@ -8,7 +8,7 @@
 import UIKit
 
 class GameButton: UIButton {
-  func configure(width: Double = 120, color: UIColor = .systemGreen, image: String = "checkmark") {
+  func configure(width: Double = 100, color: UIColor = .systemGreen, image: String = "checkmark") {
     let largeConfig = UIImage.SymbolConfiguration(pointSize: 0.4 * width, weight: .bold, scale: .large)
     let largeBoldDoc = UIImage(systemName: image, withConfiguration: largeConfig)
     setImage(largeBoldDoc, for: .normal)

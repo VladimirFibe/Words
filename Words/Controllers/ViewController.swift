@@ -8,6 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+  var game = WordsBrain()
+  
   var timer = Timer()
   var totalTime = 60
   var secondsPassed = 0 {

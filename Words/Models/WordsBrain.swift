@@ -9,10 +9,11 @@ import Foundation
 
 struct WordsBrain {
   var title = "Угадай"
-  var words = ["Россия", "Япония", "Армения", "Австралия", "Монако", "Турция", "Мадагаскар", "США" , "Бразилия", "Перу", "Германия", "Великобритания", "Испания" , "Латвия", "Украина", "Италия"]
-  let joke = "Опытный разработчик всегда посмотрит направо и налево, даже если переходит улицу с односторонним движением."
+  var words = ["Россия"]
+  var joke = "Шутка"
   var card = 0
   var correct = 0
+  var time = 60
   var gameOver = false
   var running = false
   mutating func nextCard() {

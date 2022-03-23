@@ -12,14 +12,15 @@ class ViewController: UIViewController {
     didSet {
       if game.getRunning() {
         cardLabel.text = game.word
-      } else {
+      } else if game.getGameOver() {
         cardLabel.text = "Правильных ответов:\n\(game.getCorrect())"
+      } else {
+        cardLabel.text = "Нажмите на \"Старт\", когда будете готовы"
       }
     }
   }
   
   var timer = Timer()
-  var totalTime = 60
   var secondsPassed = 0 {
     didSet {
       timerLabel.text = "\(secondsPassed)"
@@ -80,7 +81,7 @@ class ViewController: UIViewController {
       skipButton.isHidden = false
       plusButton.isHidden = false
       timer.invalidate()
-      secondsPassed = totalTime
+      secondsPassed = game.time
       timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(update), userInfo: nil, repeats: true)
     }
   }

@@ -142,8 +142,9 @@ class ViewController: UIViewController {
         let padding = 10.0
         cardLabel.anchor(top: cardView.topAnchor, left: cardView.leftAnchor, bottom: cardView.bottomAnchor, right: cardView.rightAnchor, paddingTop: padding, paddingLeft: padding, paddingBottom: padding, paddingRight: padding)
         let imageViewBackground = UIImageView()
-        imageViewBackground.image = UIImage(named: "backgroundImagewords")
-        imageViewBackground.anchor(width: width + 35, height: 1.6 * width)
+        imageViewBackground.image = UIImage(named: "words3")
+        imageViewBackground.anchor(width: width * 1.1, height: 1.6 * width)
+        //imageViewBackground.contentMode = .scaleToFill
         view.addSubview(imageViewBackground)
         imageViewBackground.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         imageViewBackground.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 10).isActive = true

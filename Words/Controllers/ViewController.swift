@@ -13,7 +13,7 @@ class ViewController: UIViewController {
       if game.getRunning() {
         cardLabel.text = game.word
       } else {
-        cardLabel.text = "Нажмите на \"Старт\", когда будете готовы"
+        cardLabel.text = "Правильных ответов:\n\(game.getCorrect())"
       }
     }
   }
@@ -75,12 +75,14 @@ class ViewController: UIViewController {
   
   @objc func startAction() {
     game.start()
-    startButton.isHidden = true
-    skipButton.isHidden = false
-    plusButton.isHidden = false
-    timer.invalidate()
-    secondsPassed = totalTime
-    timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+    if game.getRunning() {
+      startButton.isHidden = true
+      skipButton.isHidden = false
+      plusButton.isHidden = false
+      timer.invalidate()
+      secondsPassed = totalTime
+      timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+    }
   }
   func gameOver() {
     timer.invalidate()

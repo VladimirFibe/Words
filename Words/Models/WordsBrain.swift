@@ -33,7 +33,9 @@ struct WordsBrain {
     nextCard()
   }
   mutating func start() {
-    running = true
+    if !gameOver {
+      running = true
+    }
   }
   func getRunning() -> Bool {
     running

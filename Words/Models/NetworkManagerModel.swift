@@ -8,11 +8,11 @@
 import Foundation
 
 protocol NetworkManagerDelegate {
-    func getJoke(_ jokeManager: NetworkManager, joke: JokesArr)
+    func getJoke(_ jokeManager: JokesManager, joke: JokesArr)
     func didFailWithError(error: Error)
 }
 
-class NetworkManager {
+class JokesManager {
     private let baseURL = "https://geek-jokes.sameerkumar.website/api?format=json"
     
     var delegate: NetworkManagerDelegate?

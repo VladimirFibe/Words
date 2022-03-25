@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		02527F6E27ED6DE900B61CC7 /* WordsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02527F6D27ED6DE900B61CC7 /* WordsCollectionViewController.swift */; };
+		02527F7027EDF38000B61CC7 /* Alias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02527F6F27EDF38000B61CC7 /* Alias.swift */; };
+		02527F7327EDF41B00B61CC7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02527F7227EDF41B00B61CC7 /* NetworkManager.swift */; };
 		0291833D27EA2C1400505E57 /* WordsBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0291833C27EA2C1400505E57 /* WordsBrain.swift */; };
 		02FDB5D127E945810002CEE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDB5D027E945810002CEE6 /* AppDelegate.swift */; };
 		02FDB5D327E945810002CEE6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDB5D227E945810002CEE6 /* SceneDelegate.swift */; };
@@ -27,6 +29,8 @@
 
 /* Begin PBXFileReference section */
 		02527F6D27ED6DE900B61CC7 /* WordsCollectionViewController.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = WordsCollectionViewController.swift; sourceTree = "<group>"; tabWidth = 4; };
+		02527F6F27EDF38000B61CC7 /* Alias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alias.swift; sourceTree = "<group>"; };
+		02527F7227EDF41B00B61CC7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		0291833C27EA2C1400505E57 /* WordsBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsBrain.swift; sourceTree = "<group>"; };
 		02FDB5CD27E945810002CEE6 /* Words.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Words.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02FDB5D027E945810002CEE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +61,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02527F7127EDF40300B61CC7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				02527F7227EDF41B00B61CC7 /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		02FDB5C427E945810002CEE6 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +88,7 @@
 		02FDB5CF27E945810002CEE6 /* Words */ = {
 			isa = PBXGroup;
 			children = (
+				02527F7127EDF40300B61CC7 /* Services */,
 				02FDB5E427E947A20002CEE6 /* Apps */,
 				02FDB5E627E947BE0002CEE6 /* Models */,
 				02FDB5E727E947C60002CEE6 /* Views */,
@@ -116,6 +129,7 @@
 				B62CDE0327EB0F3C00C2AE10 /* CommandsModel.swift */,
 				B62CDE0527EB0F6800C2AE10 /* JokesModel.swift */,
 				B62CDE0727EB0F8300C2AE10 /* NetworkManagerModel.swift */,
+				02527F6F27EDF38000B61CC7 /* Alias.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -211,6 +225,8 @@
 				B62CDDFE27EB0ED400C2AE10 /* QuestionModel.swift in Sources */,
 				B62CDE0627EB0F6800C2AE10 /* JokesModel.swift in Sources */,
 				0291833D27EA2C1400505E57 /* WordsBrain.swift in Sources */,
+				02527F7327EDF41B00B61CC7 /* NetworkManager.swift in Sources */,
+				02527F7027EDF38000B61CC7 /* Alias.swift in Sources */,
 				B62CDE0A27EB0FBF00C2AE10 /* TempViewHowItWorks.swift in Sources */,
 				02FDB5D527E945810002CEE6 /* ViewController.swift in Sources */,
 				B62CDE0427EB0F3C00C2AE10 /* CommandsModel.swift in Sources */,

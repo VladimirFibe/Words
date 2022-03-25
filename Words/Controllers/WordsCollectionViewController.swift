@@ -28,10 +28,13 @@ class WordsCollectionViewController: UICollectionViewController {
 
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addAction))
     }
+
     
     @objc func addAction() {
         print("Add")
     }
+    
+    
 
     // MARK: UICollectionViewDataSource
 
@@ -51,7 +54,16 @@ class WordsCollectionViewController: UICollectionViewController {
     
     // MARK: UICollectionViewDelegate
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let viewController = ViewController()
-        navigationController?.pushViewController(viewController, animated: true)
+        let joke = "А вы знаете основные достоинства IT-шников? Конечно же, это высокомерие, нетерпимость и невероятная лень."
+        NetworkManager.shared.getAlias(index: 0) { alias in
+            if let alias = alias {
+                DispatchQueue.main.async {
+                    let viewController = ViewController()
+                    viewController.game = WordsBrain(title: alias.title, words: alias.words, joke: joke, time: 60)
+                    self.navigationController?.pushViewController(viewController, animated: true)
+                }
+            }
+        }
+        
     }
 }

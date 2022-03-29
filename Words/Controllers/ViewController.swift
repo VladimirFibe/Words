@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class ViewController: UIViewController {
     
@@ -149,6 +150,7 @@ class ViewController: UIViewController {
         if game.getGameOver() { gameOver() }
         audioEffects.playSound("wrong")
         animationCard()
+        AudioServicesPlayAlertSoundWithCompletion(SystemSoundID(kSystemSoundID_Vibrate)) {} // вибрация при нажатие на кнопку
     }
     
     @objc func plusAction() {

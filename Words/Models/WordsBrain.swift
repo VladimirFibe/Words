@@ -9,7 +9,7 @@ import Foundation
 
 struct WordsBrain {
   var title = "Угадай"
-  var words = ["Россия"]
+  var words = ["Россия", "test", "Россия", "test", "Россия", "test"]
   var joke = "Шутка"
   var card = 0
   var correct = 0

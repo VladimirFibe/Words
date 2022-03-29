@@ -8,12 +8,17 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
     var game = WordsBrain() {
         didSet {
             if game.getRunning() {
                 cardLabel.text = game.word
             } else if game.getGameOver() {
                 cardLabel.text = "Правильных ответов:\n\(game.getCorrect())"
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.15){ [weak self] in
+                    self!.audioEffects.playSound("alarm_sound")
+                        }
+               
             } else {
                 cardLabel.text = "Нажмите на \"Старт\", когда будете готовы"
             }
@@ -22,6 +27,7 @@ class ViewController: UIViewController {
     
     var isFlipped = false
     var timer = Timer()
+    var audioEffects = AudioEffects()
     var secondsPassed = 0 {
         didSet {
             timerLabel.text = "\(secondsPassed)"
@@ -133,6 +139,7 @@ class ViewController: UIViewController {
         if secondsPassed > 0 {
             secondsPassed -= 1
         } else {
+           
             gameOver()
         }
     }
@@ -140,14 +147,14 @@ class ViewController: UIViewController {
     @objc func skipAction() {
         game.nextCard()
         if game.getGameOver() { gameOver() }
-        
+        audioEffects.playSound("wrong")
         animationCard()
     }
     
     @objc func plusAction() {
         game.plus()
         if game.getGameOver() { gameOver() }
-        
+        audioEffects.playSound("right")
         animationCard()
     }
     override func viewDidLoad() {

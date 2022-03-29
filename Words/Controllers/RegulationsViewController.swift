@@ -10,8 +10,6 @@ import UIKit
 class RegulationsViewController: UIViewController {
 
     
-    
-    
     let scrollView = UIScrollView()
    
      lazy var labelOne: UILabel = {

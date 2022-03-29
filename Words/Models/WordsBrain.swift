@@ -16,6 +16,7 @@ struct WordsBrain {
   var time = 60
   var gameOver = false
   var running = false
+    
   mutating func nextCard() {
     if card < words.count - 1 {
       card += 1
@@ -23,33 +24,42 @@ struct WordsBrain {
       resetGame()
     }
   }
+    
   var word: String {
     words[card]
   }
+    
   var correctLabel: String {
     String(correct)
   }
+    
   mutating func plus() {
     correct += 1
     nextCard()
   }
+    
   mutating func start() {
     if !gameOver {
       running = true
     }
   }
+    
   func getRunning() -> Bool {
     running
   }
+    
   func getCorrect() -> Int {
     correct
   }
+    
   func getCard() -> Int {
     card
   }
+    
   func getGameOver() -> Bool {
     gameOver
   }
+    
   mutating func resetGame() {
     gameOver = true
     running = false

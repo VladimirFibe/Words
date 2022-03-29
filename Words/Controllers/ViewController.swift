@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         }
     }
     
+    var isFlipped = false
     var timer = Timer()
     var secondsPassed = 0 {
         didSet {
@@ -74,6 +75,27 @@ class ViewController: UIViewController {
         return button
     }()
     
+    let cardView: UIView = {
+        let view = UIView(frame: .zero)
+        let width1 = UIScreen.main.bounds.width * 0.8
+        view.backgroundColor = .white
+        view.anchor(width: width1, height: 1.5 * width1)
+        view.layer.cornerRadius = 20
+        view.layer.borderColor = UIColor.black.cgColor
+        view.layer.borderWidth = 5
+        return view
+    }()
+    
+    let cardView1: UIView = {
+        let view = UIView(frame: .zero)
+        let width = UIScreen.main.bounds.width * 0.8
+        view.backgroundColor = .white
+        view.anchor(width: width, height: 1.5 * width)
+        view.layer.cornerRadius = 20
+        view.layer.borderColor = UIColor.black.cgColor
+        view.layer.borderWidth = 5
+        return view
+    }()
     
     
     @objc func startAction() {
@@ -97,6 +119,16 @@ class ViewController: UIViewController {
         allert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         self.present(allert, animated: true, completion: nil)
     }
+    
+    func animationCard() {
+        isFlipped != isFlipped
+        let fromView = isFlipped ? cardView : cardView1
+        let toView = isFlipped ? cardView1 : cardView
+        
+        UIView.transition(from: fromView, to: toView, duration: 0.5, options: [.curveEaseOut, .transitionCurlUp, .showHideTransitionViews])
+    }
+    
+    
     @objc func update() {
         if secondsPassed > 0 {
             secondsPassed -= 1
@@ -108,11 +140,15 @@ class ViewController: UIViewController {
     @objc func skipAction() {
         game.nextCard()
         if game.getGameOver() { gameOver() }
+        
+        animationCard()
     }
     
     @objc func plusAction() {
         game.plus()
         if game.getGameOver() { gameOver() }
+        
+        animationCard()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -129,22 +165,20 @@ class ViewController: UIViewController {
         buttonsStack.distribution = .equalSpacing
         buttonsStack.spacing = 20
         
-        
-        let cardView = UIView(frame: .zero)
+        cardView.addSubview(cardView1)
+      
         let width = UIScreen.main.bounds.width * 0.8
-        cardView.anchor(width: width, height: 1.5 * width)
-        cardView.layer.cornerRadius = 20
-        cardView.layer.borderColor = UIColor.black.cgColor
-        cardView.layer.borderWidth = 5
-        cardView.backgroundColor = .white
+
         cardView.addSubview(cardLabel)
+      
+        
         
         let padding = 10.0
         cardLabel.anchor(top: cardView.topAnchor, left: cardView.leftAnchor, bottom: cardView.bottomAnchor, right: cardView.rightAnchor, paddingTop: padding, paddingLeft: padding, paddingBottom: padding, paddingRight: padding)
         let imageViewBackground = UIImageView()
         imageViewBackground.image = UIImage(named: "words3")
         imageViewBackground.anchor(width: width * 1.1, height: 1.6 * width)
-        //imageViewBackground.contentMode = .scaleToFill
+        imageViewBackground.contentMode = .scaleToFill
         view.addSubview(imageViewBackground)
         imageViewBackground.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         imageViewBackground.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 10).isActive = true

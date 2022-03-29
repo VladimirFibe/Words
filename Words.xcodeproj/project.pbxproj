@@ -25,6 +25,8 @@
 		B62CDE0627EB0F6800C2AE10 /* JokesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62CDE0527EB0F6800C2AE10 /* JokesModel.swift */; };
 		B62CDE0827EB0F8300C2AE10 /* NetworkManagerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62CDE0727EB0F8300C2AE10 /* NetworkManagerModel.swift */; };
 		B62CDE0A27EB0FBF00C2AE10 /* TempViewHowItWorks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62CDE0927EB0FBF00C2AE10 /* TempViewHowItWorks.swift */; };
+		C96CBFDF27F353C20003C9A2 /* RegulationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96CBFDE27F353C20003C9A2 /* RegulationsViewController.swift */; };
+		C96CBFE127F354610003C9A2 /* Regulations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96CBFE027F354610003C9A2 /* Regulations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		B62CDE0527EB0F6800C2AE10 /* JokesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesModel.swift; sourceTree = "<group>"; };
 		B62CDE0727EB0F8300C2AE10 /* NetworkManagerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerModel.swift; sourceTree = "<group>"; };
 		B62CDE0927EB0FBF00C2AE10 /* TempViewHowItWorks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempViewHowItWorks.swift; sourceTree = "<group>"; };
+		C96CBFDE27F353C20003C9A2 /* RegulationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegulationsViewController.swift; sourceTree = "<group>"; };
+		C96CBFE027F354610003C9A2 /* Regulations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regulations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 			children = (
 				02FDB5D427E945810002CEE6 /* ViewController.swift */,
 				02527F6D27ED6DE900B61CC7 /* WordsCollectionViewController.swift */,
+				C96CBFDE27F353C20003C9A2 /* RegulationsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -147,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				02FDB5E927E94AD20002CEE6 /* Extensions.swift */,
+				C96CBFE027F354610003C9A2 /* Regulations.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -226,7 +232,9 @@
 				B62CDE0627EB0F6800C2AE10 /* JokesModel.swift in Sources */,
 				0291833D27EA2C1400505E57 /* WordsBrain.swift in Sources */,
 				02527F7327EDF41B00B61CC7 /* NetworkManager.swift in Sources */,
+				C96CBFDF27F353C20003C9A2 /* RegulationsViewController.swift in Sources */,
 				02527F7027EDF38000B61CC7 /* Alias.swift in Sources */,
+				C96CBFE127F354610003C9A2 /* Regulations.swift in Sources */,
 				B62CDE0A27EB0FBF00C2AE10 /* TempViewHowItWorks.swift in Sources */,
 				02FDB5D527E945810002CEE6 /* ViewController.swift in Sources */,
 				B62CDE0427EB0F3C00C2AE10 /* CommandsModel.swift in Sources */,

@@ -57,9 +57,9 @@
 		C96CBFDE27F353C20003C9A2 /* RegulationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegulationsViewController.swift; sourceTree = "<group>"; };
 		C96CBFE027F354610003C9A2 /* Regulations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regulations.swift; sourceTree = "<group>"; };
 		C96CBFE227F35B290003C9A2 /* AudioEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioEffects.swift; sourceTree = "<group>"; };
-		C96CBFE427F35B960003C9A2 /* alarm_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm_sound.mp3; sourceTree = SOURCE_ROOT; };
-		C96CBFE627F360560003C9A2 /* right.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = right.mp3; sourceTree = SOURCE_ROOT; };
-		C96CBFE827F361300003C9A2 /* wrong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wrong.mp3; sourceTree = SOURCE_ROOT; };
+		C96CBFE427F35B960003C9A2 /* alarm_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = alarm_sound.mp3; path = "Words/New Group/alarm_sound.mp3"; sourceTree = SOURCE_ROOT; };
+		C96CBFE627F360560003C9A2 /* right.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = right.mp3; path = "Words/New Group/right.mp3"; sourceTree = SOURCE_ROOT; };
+		C96CBFE827F361300003C9A2 /* wrong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = wrong.mp3; path = "Words/New Group/wrong.mp3"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,10 +106,8 @@
 				02FDB5E727E947C60002CEE6 /* Views */,
 				02FDB5E527E947AF0002CEE6 /* Controllers */,
 				02FDB5E827E947CE0002CEE6 /* Utilities */,
+				1F8C220F27F423F2003F0341 /* Sounds */,
 				02FDB5D927E945830002CEE6 /* Assets.xcassets */,
-				C96CBFE827F361300003C9A2 /* wrong.mp3 */,
-				C96CBFE627F360560003C9A2 /* right.mp3 */,
-				C96CBFE427F35B960003C9A2 /* alarm_sound.mp3 */,
 				02FDB5DB27E945830002CEE6 /* LaunchScreen.storyboard */,
 				02FDB5DE27E945830002CEE6 /* Info.plist */,
 			);
@@ -167,6 +165,16 @@
 				C96CBFE227F35B290003C9A2 /* AudioEffects.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		1F8C220F27F423F2003F0341 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				C96CBFE827F361300003C9A2 /* wrong.mp3 */,
+				C96CBFE627F360560003C9A2 /* right.mp3 */,
+				C96CBFE427F35B960003C9A2 /* alarm_sound.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,7 +406,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Words/Info.plist;
@@ -413,7 +421,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.5;
+				MARKETING_VERSION = 0.1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.ilines.nsu.Words;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -428,7 +436,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Words/Info.plist;
@@ -443,7 +451,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.5;
+				MARKETING_VERSION = 0.1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.ilines.nsu.Words;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
